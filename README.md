@@ -22,7 +22,7 @@ Next, you need to load FA engine and the example of FA into Prolog. Do
 
 to load the simulator, and do
 
-| ?- [even].
+| ?- [Assign].
 Note:
 
 Your current working directory should contain the prolog files.
