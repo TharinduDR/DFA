@@ -1,19 +1,19 @@
 :- [engine].
-start_state(q0).
-halt_state(q1).
-halt_state(q3).
+start_state(s0).
+halt_state(s1).
+halt_state(s3).
 
-trans(q0, X, q2):- is_plus_or_minus(X).
-trans(q0, X, q1):- is_digit(X).
-trans(q2, X, q1):- is_digit(X).
-trans(q1, X, q1):- is_digit(X).
-trans(q1, X, q0):- is_plus_or_minus(X).
-trans(q1, X, q0):- is_multiple_or_devision(X).
-trans(q1, X, q4):- is_decimal_point(X).
-trans(q4, X, q3):- is_digit(X).
-trans(q3, X, q3):- is_digit(X).
-trans(q3, X, q0):- is_plus_or_minus(X).
-trans(q3, X, q0):- is_multiple_or_devision(X).
+trans(s0, X, s2):- is_plus_or_minus(X).
+trans(s0, X, s1):- is_digit(X).
+trans(s2, X, s1):- is_digit(X).
+trans(s1, X, s1):- is_digit(X).
+trans(s1, X, s0):- is_plus_or_minus(X).
+trans(s1, X, s0):- is_multiple_or_devision(X).
+trans(s1, X, s4):- is_decimal_point(X).
+trans(s4, X, s3):- is_digit(X).
+trans(s3, X, s3):- is_digit(X).
+trans(s3, X, s0):- is_plus_or_minus(X).
+trans(s3, X, s0):- is_multiple_or_devision(X).
 
 
 is_digit(X):-
